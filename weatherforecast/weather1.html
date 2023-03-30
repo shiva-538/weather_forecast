@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ body{
+ padding-left: 80vh;
+ padding-top: 50px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+</style>
+<body>
+    <label for="input" >Enter your input:</label>
+    <input type="text" id="input" placeholder="enter city name.....">
+    <button onclick="getResponse()">Search</button>
+    <div id="response"></div>
+    <script>
+        function getResponse() {
+            const userInput = document.getElementById('input').value;
+            let response;
+            switch (userInput.toLowerCase()) {
+                case "hyderabad":
+                    response = "date:30/03/2023 , thursday ,27 degree celcius, windy,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "banglore":
+                    response = "date:30/03/2023 , thursday ,26 degree celcius, rainy,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "chennai":
+                    response = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "delhi":
+                    response = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "ahmedabad":
+                    response = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "kolkata":
+                    response = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "pune":
+                    response = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+                case "kolkata":
+                    response = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+                    break;
+
+
+            }
+            const responseDiv = document.getElementById('response');
+            responseDiv.textContent = response;
+        }
+
+    </script>
+
+</body>
+
+</html>

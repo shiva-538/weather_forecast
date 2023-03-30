@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch Example</title>
+</head>
+<style>
+	p{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+  h1 {
+    margin-top: 150px;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+</style>
+<body>
+	<p>enter <br>
+		1 for Hyderabad <br>
+		2 for Banglore <br>
+		3 for Chennai <br>
+		4 for Delhi <br>
+		5 for Ahmedabad
+	</p>
+
+	<label for="input">Enter a city name (hyderabad, Blr, delhi, ahmedabad, or Chennai): </label>
+	<input type="text" id="input">
+	<button onclick="showalert()">Search</button>
+
+	<p id="response"></p>
+
+	<script>
+		function showalert() {
+			var userInput = document.getElementById("input").value;
+		userInput = parseInt(userInput);
+			switch(userInput) {
+				case 1:
+					document.getElementById("response").innerHTML = "date:30/03/2023 , thursday ,27 degree celcius, windy,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+					break;
+					case 1:
+					document.getElementById("response").innerHTML = "date:30/03/2023 , thursday ,26 degree celcius, rainy,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+					break;
+					case 2:
+					document.getElementById("response").innerHTML = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+					break;
+					case 3:
+					document.getElementById("response").innerHTML = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+					break;
+					case 4:
+					document.getElementById("response").innerHTML = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+					break;
+					case 5:
+					document.getElementById("response").innerHTML = "date:30/03/2023 , thursday ,23 degree celcius, snow,      MIN-TEMP=23 degree celcius,   MAX-TEMP=35 degree celcius";
+					break;
+				default:
+					document.getElementById("response").innerHTML = "invalid";
+          
+			}
+		}
+	</script>
+
+</body>
+</html>
